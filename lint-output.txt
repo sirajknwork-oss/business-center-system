@@ -1,0 +1,189 @@
+﻿
+> business-center-system@0.1.0 lint
+> eslint
+
+
+D:\saas\business-center-system\app\expiry\page.tsx
+  8:35  warning  'CurrentUserInfo' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\auto-create-admin-table.js
+    1:26  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+    2:1   error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+   83:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  118:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\auto-create-tables.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\check-database-data.js
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\check-storage.js
+   1:26  error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+   8:7   warning  'supabaseClient' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  16:13  warning  'data' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  41:15  warning  'data' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\create-admin-storage.js
+   1:26  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  36:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\create-admin-user.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\create-complete-database.js
+  2:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\create-creator-with-auth.js
+   2:1   error    A `require()` style import is forbidden          @typescript-eslint/no-require-imports
+   3:26  error    A `require()` style import is forbidden          @typescript-eslint/no-require-imports
+  60:25  warning  'updateData' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  93:21  warning  'userData' is assigned a value but never used    @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\create-creator.js
+   1:26  error    A `require()` style import is forbidden          @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden          @typescript-eslint/no-require-imports
+  16:13  warning  'data' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  31:21  warning  'signInData' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\create-tables-direct.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\create-tables-sql.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\create-tables-without-sql.js
+    2:1   error    A `require()` style import is forbidden             @typescript-eslint/no-require-imports
+    3:26  error    A `require()` style import is forbidden             @typescript-eslint/no-require-imports
+   22:19  warning  'testData' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   32:15  warning  'data' is assigned a value but never used           @typescript-eslint/no-unused-vars
+   73:23  warning  'insertData' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  115:19  warning  'testData' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  124:15  warning  'data' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  151:23  warning  'insertData' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  194:19  warning  'employeesData' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  206:19  warning  'adminData' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\debug-admin-creation.js
+   1:26  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  15:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\debug-admin-flow.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\execute-schema.js
+   1:26  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  61:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\fix-creator-password.js
+    2:1   error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+    3:26  error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+    4:16  error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+   37:21  warning  'newCreator' is assigned a value but never used      @typescript-eslint/no-unused-vars
+   71:21  warning  'updatedCreator' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  130:10  warning  'e' is defined but never used                        @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\fix-database-tables.js
+    2:1   error    A `require()` style import is forbidden             @typescript-eslint/no-require-imports
+    3:26  error    A `require()` style import is forbidden             @typescript-eslint/no-require-imports
+   18:16  warning  'executeSQL' is defined but never used              @typescript-eslint/no-unused-vars
+   21:13  warning  'data' is assigned a value but never used           @typescript-eslint/no-unused-vars
+   93:17  warning  'data' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  101:16  warning  'err' is defined but never used                     @typescript-eslint/no-unused-vars
+  147:17  warning  'data' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  155:16  warning  'err' is defined but never used                     @typescript-eslint/no-unused-vars
+  166:21  warning  'employeesData' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  181:21  warning  'adminData' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\fix-database.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\inspect-excel.ts
+  2:13  warning  'path' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\migrate-schema.js
+  1:15  error    A `require()` style import is forbidden           @typescript-eslint/no-require-imports
+  2:7   warning  'querystring' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  2:21  error    A `require()` style import is forbidden           @typescript-eslint/no-require-imports
+  3:1   error    A `require()` style import is forbidden           @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\run-migration.js
+   1:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:1   error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  38:18  warning  'err' is defined but never used          @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\scripts\bootstrap-creator.js
+  13:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  14:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\setup-creator.js
+   1:12  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  29:26  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  31:1   error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  45:13  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\setup-database-data.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\setup-database-final.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\setup-database.js
+    1:26  error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+    2:1   error    A `require()` style import is forbidden              @typescript-eslint/no-require-imports
+   15:19  warning  'companiesCheck' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   51:19  warning  'employeesCheck' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   85:19  warning  'expiryCheck' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  120:19  warning  'storeCheck' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+D:\saas\business-center-system\test-admin-login.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-creator-login.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-login-again.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-login.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-migration.js
+  1:26  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:7   warning  'fs' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  2:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:1   error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-new-server.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\test-system.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+D:\saas\business-center-system\verify-database-setup.js
+  1:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+Γ£û 112 problems (71 errors, 41 warnings)
+

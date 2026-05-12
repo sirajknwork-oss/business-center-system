@@ -1,0 +1,28 @@
+# =====================================
+# Business Center System Environment
+# =====================================
+
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+
+# Creator Credentials
+CREATOR_EMAIL=sirajkn.work@gmail.com
+CREATOR_PASSWORD=SirajZaira@126
+CREATOR_NAME=System Creator
+CREATOR_ROLE=creator
+
+# Email Service Configuration (for production)
+SENDGRID_API_KEY=your_sendgrid_api_key_here
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_smtp_username
+SMTP_PASS=your_smtp_password
+
+# Application Settings
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NODE_ENV=development
+
+# Security
+JWT_SECRET=your_jwt_secret_key_here
+SESSION_SECRET=your_session_secret_key_here
