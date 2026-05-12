@@ -2,19 +2,19 @@ import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const bootstrapSecret = process.env.BOOTSTRAP_SECRET;
 
 export async function POST(request: Request) {
   // Check environment variables
-  if (!supabaseUrl || !supabaseServiceRoleKey || !bootstrapSecret) {
+  if (!supabaseUrl || !supabaseKey || !bootstrapSecret) {
     return NextResponse.json(
       { error: "Server configuration error: missing environment variables" },
       { status: 500 }
     );
   }
 
-  const supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey);
+  const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
   const authHeader = request.headers.get("x-bootstrap-secret") || "";
 
