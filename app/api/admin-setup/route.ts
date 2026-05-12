@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseKey) {
-  throw new Error("supabaseKey is required but not found in environment variables.");
+if (!supabaseUrl || !supabaseKey) {
+  console.error("Missing Supabase environment variables");
 }
 
-const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
+const supabaseAdmin = createClient(supabaseUrl!, supabaseKey!);
 
 export async function POST() {
   try {
