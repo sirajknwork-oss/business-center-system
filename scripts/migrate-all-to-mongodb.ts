@@ -54,7 +54,7 @@ async function migrateAllData() {
         }
       }
     } else {
-      console.log('📋 Available tables:', tableData?.map(t => t.tablename))
+      console.log('📋 Available tables:', tableData?.map((t: any) => t.tablename))
     }
   } catch (err) {
     console.log('❌ Error checking Supabase tables:', err)
