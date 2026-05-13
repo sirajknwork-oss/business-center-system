@@ -10,7 +10,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "import-excel": "tsx import-excel.ts"
+    "import-excel": "tsx import-excel.ts",
+    "migrate:companies": "tsx scripts/migrate-companies-to-mongodb.ts",
+    "migrate:employees": "tsx scripts/migrate-employees-to-mongodb.ts",
+    "migrate:expiry": "tsx scripts/migrate-expiry-to-mongodb.ts",
+    "migrate:store": "tsx scripts/migrate-store-to-mongodb.ts",
+    "migrate:admin-users": "tsx scripts/migrate-admin-users-to-mongodb.ts",
+    "migrate:profiles": "tsx scripts/migrate-profiles-to-mongodb.ts",
+    "migrate:all": "tsx scripts/migrate-all-to-mongodb.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -20,6 +27,7 @@
     "dotenv": "^17.4.2",
     "firebase": "^12.13.0",
     "lucide-react": "^1.14.0",
+    "mongodb": "^7.2.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",

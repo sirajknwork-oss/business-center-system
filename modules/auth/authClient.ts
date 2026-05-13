@@ -11,6 +11,23 @@ export interface CurrentUserInfo {
   assignedCompanies: string[] | null;
 }
 
+// Helper function to fetch profile from MongoDB via API
+async function getProfileFromAPI(id: string) {
+  try {
+    const response = await fetch(`/api/profiles/${id}`)
+    if (!response.ok) {
+      return null
+    }
+    return await response.json()
+  } catch (error) {
+    console.error('Error fetching profile from API:', error)
+    return null
+  }
+}
+
+// Local storage for user sessions
+const USER_SESSION_KEY = 'business_center_user_session';
+
 // Sample users for local authentication (until database is ready)
 const SAMPLE_USERS = {
   [process.env.CREATOR_EMAIL || "sirajkn.work@gmail.com"]: {
@@ -21,9 +38,6 @@ const SAMPLE_USERS = {
     notificationEmail: process.env.CREATOR_EMAIL || "sirajkn.work@gmail.com"
   }
 };
-
-// Local storage for user sessions
-const USER_SESSION_KEY = 'business_center_user_session';
 
 export async function signInWithEmail(email: string, password: string) {
   try {
@@ -135,11 +149,8 @@ export async function getCurrentUserInfo(): Promise<CurrentUserInfo> {
       return { role: null, companyId: null, email: null, name: null, assignedCompanies: null };
     }
 
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('role, company_id, name')
-      .eq('id', session.user.id)
-      .single();
+    // Get profile from MongoDB via API instead of Supabase
+    const profile = await getProfileFromAPI(session.user.id);
 
     return {
       role: profile?.role || null,
