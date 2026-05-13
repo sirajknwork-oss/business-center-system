@@ -95,6 +95,9 @@ export async function signInWithEmail(email: string, password: string) {
     }
     
     // Fallback to Supabase (for production)
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } };
+    }
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     return { data, error };
     
@@ -104,6 +107,9 @@ export async function signInWithEmail(email: string, password: string) {
 }
 
 export async function signUpWithEmail(email: string, password: string, role = "customer") {
+  if (!supabase) {
+    throw new Error('Supabase not configured');
+  }
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
@@ -144,6 +150,9 @@ export async function getCurrentUserInfo(): Promise<CurrentUserInfo> {
     }
     
     // Fallback to Supabase session
+    if (!supabase) {
+      return { role: null, companyId: null, email: null, name: null, assignedCompanies: null };
+    }
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
       return { role: null, companyId: null, email: null, name: null, assignedCompanies: null };
@@ -171,7 +180,9 @@ export async function signOut() {
     localStorage.removeItem(USER_SESSION_KEY);
     
     // Clear Supabase session
-    await supabase.auth.signOut();
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
   } catch (error) {
     console.error('Error signing out:', error);
   }

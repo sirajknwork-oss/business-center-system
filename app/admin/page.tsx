@@ -7,6 +7,8 @@ import { getCompanies, type Company } from "@/modules/companies/companiesClient"
 import { createUserAccount, type CreatedUserPayload } from "@/modules/admin/adminClient";
 import { getAdminUsers, updateAdminUser, deleteAdminUser, type AdminUserStorage } from "@/modules/admin/adminStorageClient";
 
+export const dynamic = 'force-dynamic'
+
 const generateUserId = () => {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
     return crypto.randomUUID();

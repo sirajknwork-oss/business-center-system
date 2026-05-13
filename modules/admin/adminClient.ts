@@ -10,6 +10,9 @@ export interface CreatedUserPayload {
 }
 
 export async function createUserAccount(data: CreatedUserPayload): Promise<Employee> {
+  if (!supabase) {
+    throw new Error("Supabase not configured");
+  }
   const session = await supabase.auth.getSession();
   const token = session.data.session?.access_token;
 

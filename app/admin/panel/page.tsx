@@ -5,6 +5,8 @@ import Link from "next/link";
 import { getCurrentUserInfo } from "@/modules/auth/authClient";
 import { getEmployeesByRoles, type Employee } from "@/modules/employees/employeesClient";
 
+export const dynamic = 'force-dynamic'
+
 export default function AdminPanelPage() {
   const [employees, setEmployees] = useState<(Employee & { companies?: { id: string; name: string } })[]>([]);
   const [loading, setLoading] = useState(true);
