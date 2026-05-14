@@ -24,7 +24,7 @@ const isBrowser = typeof window !== 'undefined'
 function normalizeCompany(doc: any): Company {
   return {
     ...doc,
-    id: String(doc.id ?? doc._id?.toString()),
+    id: String(doc.id ?? doc._id),
   }
 }
 

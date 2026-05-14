@@ -2,14 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { getCurrentUserInfo, signOut, hasPermission } from "@/modules/auth/authClient";
 import { createUser, updateUser, deleteUser, getUsersByRole, type User } from "@/modules/auth/userStorageClient";
 import { Header } from "@/components/Header";
 
 export default function UsersPage() {
+  const searchParams = useSearchParams();
   const [userInfo, setUserInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"admins" | "staff" | "customers">("staff");
+  const [activeTab, setActiveTab] = useState<"admins" | "staff" | "customers">(
+    (searchParams.get('tab') as "admins" | "staff" | "customers") || "staff"
+  );
 
   useEffect(() => {
     async function loadUserData() {
@@ -25,6 +29,13 @@ export default function UsersPage() {
 
     loadUserData();
   }, []);
+
+  useEffect(() => {
+    const tab = searchParams.get('tab') as "admins" | "staff" | "customers" | null;
+    if (tab) {
+      setActiveTab(tab);
+    }
+  }, [searchParams]);
 
   async function handleSignOut() {
     await signOut();
