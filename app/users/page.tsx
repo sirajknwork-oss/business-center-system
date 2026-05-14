@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+export const dynamic = 'force-dynamic'
+
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { getCurrentUserInfo, signOut, hasPermission } from "@/modules/auth/authClient";
@@ -8,6 +10,20 @@ import { createUser, updateUser, deleteUser, getUsersByRole, type User } from "@
 import { Header } from "@/components/Header";
 
 export default function UsersPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-zinc-50 flex items-center justify-center px-6 py-12">
+        <div className="rounded-3xl border border-slate-200 bg-white/95 px-8 py-10 shadow-xl">
+          <p className="text-base text-slate-700">Loading user management…</p>
+        </div>
+      </div>
+    }>
+      <UsersContent />
+    </Suspense>
+  )
+}
+
+function UsersContent() {
   const searchParams = useSearchParams();
   const [userInfo, setUserInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);

@@ -1,8 +1,3 @@
-import { redirect } from "next/navigation";
-
-export default function CustomersPage() {
-  redirect("/users?tab=customers");
-}
 import { redirect } from 'next/navigation'
 
 export default function CustomersPage() {

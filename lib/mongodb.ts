@@ -20,20 +20,27 @@ class MockDatabase {
       this.collections.set(name, [])
     }
     return {
-      find: (query: any) => ({
-        sort: () => ({
-          toArray: async () => {
-            let data = this.collections.get(name) || []
-            // Simple filtering
-            if (query && Object.keys(query).length > 0) {
-              data = data.filter(item => {
-                return Object.entries(query).every(([key, value]) => item[key] === value)
-              })
-            }
-            return data
+      find: (query: any) => {
+        const getData = async () => {
+          let data = this.collections.get(name) || []
+          if (query && Object.keys(query).length > 0) {
+            data = data.filter(item => {
+              return Object.entries(query).every(([key, value]) => item[key] === value)
+            })
           }
-        })
-      }),
+          return data
+        }
+
+        const cursor = {
+          toArray: getData,
+          sort: () => cursor,
+          project: () => cursor,
+          limit: () => cursor,
+          skip: () => cursor,
+        }
+
+        return cursor
+      },
       findOne: async (query: any) => {
         const data = this.collections.get(name) || []
         return data.find(item => {
@@ -72,7 +79,21 @@ class MockDatabase {
       },
       countDocuments: async () => {
         return (this.collections.get(name) || []).length
-      }
+      },
+      aggregate: (pipeline: any[]) => ({
+        toArray: async () => {
+          let data = this.collections.get(name) || []
+          for (const stage of pipeline) {
+            if (stage.$match) {
+              data = data.filter(item => {
+                return Object.entries(stage.$match).every(([key, value]) => item[key] === value)
+              })
+            }
+            // For unsupported stages like $lookup, $project, $group, $sort, return the current data as-is.
+          }
+          return data
+        }
+      })
     }
   }
 }
